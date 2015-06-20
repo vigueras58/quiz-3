@@ -1,0 +1,21 @@
+<!--doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='../stylesheets/style.css')
+    link(rel='icon', href='favicon.ico', type='image/x-icon')
+  body
+    block content
+		h1= title
+		h2 Quiz: el juego de las preguntas
+		h3 Pregunta: #{pregunta}
+		form(action="/answer", method="post")
+			input(type="text", name="answer")
+			input(type="submit", value="enviar")-->
+			
+			
+<form method="get" action="/quizes/answer">
+	<p>Pregunta: <%= pregunta %></p>
+	<input type='text' name='respuesta' value='Respuesta'/>
+	<input type='submit' value='enviar'/>
+ </form>
