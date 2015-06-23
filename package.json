@@ -16,6 +16,7 @@
     "express": "~4.12.4",
     "express-partials": "^0.3.0",
     "jade": "^1.9.2",
+    "ejs": "^1.0.0",
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1"
   }
