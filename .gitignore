@@ -45,4 +45,5 @@ Temporary Items
 
 #sqlite files
 quiz.sqlite
+.env
 
