@@ -28,6 +28,7 @@ $RECYCLE.BIN/
 node_modules
 .AppleDouble
 .LSOverride
+npm-debug.log
 
 # Thumbnails
 ._*
@@ -46,4 +47,5 @@ Temporary Items
 #sqlite files
 quiz.sqlite
 .env
+
 
