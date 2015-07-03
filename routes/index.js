@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
-
-var quizController = require('../controllers/quizController');
+var quiz_controller = require('../controllers/quiz_controllers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Quiz' });
+  res.render('index', { title: 'Express' });
 });
 
-router.get('/quizes/question',quizController.question);
-router.get('/quizes/answer',quizController.answer);
+router.get('/author', function(req, res, next){
+  res.render('author',{ title: 'creditos', author:'Fernando Mata Pelaez'});
+});
+router.get('/quizes/question',quiz_controller.question);
+router.get('/quizes/answer',quiz_controller.answer);
+
 
 module.exports = router;
