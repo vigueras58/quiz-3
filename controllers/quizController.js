@@ -1,5 +1,6 @@
 var models = require('../models/models.js');
 
+<<<<<<< HEAD
 
 
 // GET /quizes
@@ -19,6 +20,25 @@ exports.show = function(req,res){
 		});
 	};
 
+=======
+// GET /quizes
+exports.index = function(req,res){
+	models.Quiz.findAll().then(function(quiz){
+		
+		res.render('quizes/index', {title: 'Quiz',quizes:quiz});
+		});
+	};
+
+
+// GET /quizes/:quizID(\\d+)
+exports.show = function(req,res){
+		models.Quiz.find(req.params.quizID).then(function(quiz){
+			
+			res.render('quizes/show', {title: 'Quiz', quiz:quiz});
+		});
+	};
+
+>>>>>>> iss1
 // GET /quizes/:quizID(\\d+)/answer
 exports.answer = function(req,res){
 		models.Quiz.find(req.params.quizID).then(function(quiz){
