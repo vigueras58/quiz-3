@@ -10,8 +10,10 @@ router.get('/', function(req, res, next) {
 router.get('/author', function(req, res, next){
   res.render('author',{ title: 'creditos', author:'Fernando Mata Pelaez'});
 });
-router.get('/quizes/question',quiz_controller.question);
-router.get('/quizes/answer',quiz_controller.answer);
+
+router.get('/quizes',quiz_controller.index);
+router.get('/quizes/:quizID(\\d+)',quiz_controller.show);
+router.get('/quizes/:quizID(\\d+)/answer',quiz_controller.answer);
 
 
 module.exports = router;
