@@ -1,12 +1,14 @@
 var models = require('../models/models.js');
 
+
+
 // GET /quizes
 exports.index = function(req,res){
 	models.Quiz.findAll().then(function(quizes){
-		
-		res.render('quizes/index', {title: 'Quiz',quizes:quizes});
-		});
-	};
+			
+		res.render('/quizes/index', {title: 'Quiz',quizes:quizes});
+	}).catch(function(error){next(error)})
+};
 
 
 // GET /quizes/:quizID(\\d+)
